@@ -1,3 +1,4 @@
+import { logger } from "../../../server/utils/Logger.js"
 import { Pop } from "./Pop.js"
 
 const elems = {}
@@ -9,7 +10,7 @@ function getElem(id) {
       throw new Error(`Invalid element Id ${id}`)
     }
   } catch (error) {
-    console.error('[ATTEMPTING_TO_SET_HTML]', id)
+    logger.error('[ATTEMPTING_TO_SET_HTML]', id)
     Pop.error(error)
   }
 }

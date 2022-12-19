@@ -1,3 +1,4 @@
+import { logger } from "../../../server/utils/Logger.js"
 import { Pop } from "./Pop.js"
 
 export function saveState(key, value) {
@@ -8,7 +9,7 @@ export function saveState(key, value) {
     }
     window.localStorage.setItem(key, data)
   } catch (error) {
-    console.error('[SAVING_STATE]', { key, value })
+    logger.error('[SAVING_STATE]', { key, value })
     Pop.error(error)
   }
 }
@@ -21,7 +22,7 @@ export function loadState(key, instanceType) {
     }
     return data
   } catch (error) {
-    console.error('[ATTEMPTING_TO_LOAD_STATE]', { key, instanceType })
+    logger.error('[ATTEMPTING_TO_LOAD_STATE]', { key, instanceType })
     Pop.error(error)
   }
 }

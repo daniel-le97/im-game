@@ -94,6 +94,7 @@ import { AppState } from "../../AppState.js";
 import { GameNight } from "../../models/GroupsAndGameNight/GameNight.js";
 // import { Group } from "../../models/GroupsAndGameNight/Group.js";
 import { gameNightsService } from "../../services/GameNightsService.js";
+import { logger } from "../../utils/Logger";
 import Pop from "../../utils/Pop.js";
 
 export default {
@@ -158,7 +159,7 @@ export default {
           }
           await gameNightsService.removeGameNight(props.gamenight.id);
         } catch (error) {
-          console.error("[]", error);
+          logger.error("[]", error);
           Pop.error(error);
         }
       },
@@ -174,7 +175,7 @@ export default {
         try {
           await gameNightsService.attendGamenight(gamenightId);
         } catch (error) {
-          console.error(error);
+          logger.error(error);
           Pop.error(error.message);
         }
       },
