@@ -131,6 +131,7 @@ export default {
     const filterBg = ref("favorite");
     const route = useRoute();
     const editable = ref("");
+    // hello
     async function getProfileGroups() {
       try {
         await profilesService.getProfileGroups(route.params.id);
@@ -150,7 +151,7 @@ export default {
       try {
         await profilesService.getUserProfile(route.params.id);
       } catch (error) {
-        Pop.error(error, "[getProfile]");
+        Pop.error(error, "[]");
       }
     }
     function focus() {
@@ -185,6 +186,7 @@ export default {
           filterBg.value ? b.listName == filterBg.value : true
         )
       ),
+      // 
 
 
 
