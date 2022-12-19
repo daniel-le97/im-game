@@ -1,8 +1,9 @@
 {
   "name": "codeworks-auth-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "This template is designed to help kickstart a project that utilizes <a href=\"https://auth0.com/\" target=\"_blank\">Auth0.</a> The bulk of the structure has been setup and requires a few pieces of configuration.",
   "main": "index.js",
+  "module": "main.js",
   "scripts": {
     "debug": "node index.js",
     "start": "node index.js",
@@ -16,7 +17,7 @@
     "@bcwdev/auth0provider": "1.0.13",
     "cors": "2.8.5",
     "dotenv": "16.0.1",
-    "esm": "3.2.25",
+    "esm": "^3.2.25",
     "express": "4.18.1",
     "helmet": "5.1.1",
     "mongoose": "6.5.3",
@@ -30,5 +31,6 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "6.0.0",
     "sass": "1.54.4"
-  }
+  },
+  "keywords": []
 }
